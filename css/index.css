@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: #333;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+/*版心*/
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+.nav-in {
+  /*左侧*/
+  position: relative;
+  height: 70px;
+  background-color: green;
+}
+.nav-in .m-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  width: 80px;
+  height: 50px;
+  background-color: red;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: yellow;
+  display: none;
+}
+.nav-in .nav-left {
+  margin-top: 10px;
+  height: 50px;
+}
+.nav-in .nav-left li {
+  width: 80px;
+  height: 50px;
+  float: left;
+  background-color: yellow;
+  margin: 0 10px;
+  text-align: center;
+}
+.nav-in .nav-left li:hover {
+  background-color: red;
+}
+.nav-in .nav-left li a {
+  color: darkgreen;
+  line-height: 50px;
+}
+.nav-in .nav-left li a:hover {
+  color: #fff;
+}
+.nav-in .nav-right {
+  /*右侧*/
+  height: 50px;
+  margin-top: 10px;
+}
+.nav-in .nav-right li {
+  float: left;
+  margin: 0 10px;
+  width: 80px;
+  height: 50px;
+  background-color: yellow;
+  text-align: center;
+}
+.nav-in .nav-right li:hover {
+  background-color: red;
+}
+.nav-in .nav-right li a {
+  color: darkgreen;
+  line-height: 50px;
+}
+.nav-in .nav-right li a:hover {
+  color: #fff;
+}
+/* banner*/
+.banner .pc-img {
+  height: 350px;
+  background-image: linear-gradient(to right, yellow, greenyellow, green);
+}
+.banner .m-img {
+  height: 350px;
+  background-image: radial-gradient(300px 300px at center, green, yellow);
+}
+/* 产品*/
+.product {
+  padding: 30px;
+  background-color: yellowgreen;
+  overflow: hidden;
+}
+.product .container div {
+  float: left;
+  width: 30%;
+  height: 130px;
+  margin: 10px 1.5%;
+  background-color: yellow;
+  margin-bottom: 20px;
+}
+/*底部*/
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: greenyellow;
+  font-size: 20px;
+  text-align: center;
+  line-height: 150px;
+  color: green;
+}
+/*响应式控制 首先让版心实现响应式 */
+/*大屏幕*/
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .hidden-lg {
+    display: none;
+  }
+}
+/*中等屏幕*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 980px;
+  }
+  .hidden-md {
+    display: none;
+  }
+}
+/*ipad屏幕*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+  .hidden-sm {
+    display: none;
+  }
+  .product .container div {
+    width: 48%;
+    margin: 10px 1%;
+  }
+}
+/*手机屏幕*/
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  .hidden-xs {
+    display: none;
+  }
+  .nav .container .nav-in .nav-left {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 70px;
+  }
+  .nav .container .nav-in .nav-left li {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  .nav .container .nav-in .nav-left li a {
+    width: 100%;
+  }
+  .nav .container .nav-in .m-btn {
+    display: block;
+  }
+  /*产品*/
+  .product .container div {
+    width: 96%;
+    margin: 10px 2%;
+  }
+}
